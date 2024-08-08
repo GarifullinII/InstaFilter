@@ -101,7 +101,7 @@ struct ContentView: View {
         processedImage = Image(uiImage: uiImage)
     }
     
-    func setFilter(_ filter: CIFilter) {
+    @MainActor func setFilter(_ filter: CIFilter) {
         currentFilter = filter
         loadImage()
         filterCount += 1
